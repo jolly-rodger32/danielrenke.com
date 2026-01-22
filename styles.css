@@ -1,22 +1,36 @@
 :root{
-  --bg:#0b1220;
-  --panel:#0f1a2e;
-  --text:#e6eaf2;
-  --muted:#a8b3c7;
-  --line:rgba(255,255,255,.10);
-  --accent:#7dd3fc;
-  --accent2:#c4b5fd;
-  --shadow: 0 20px 60px rgba(0,0,0,.45);
+  /* Base */
+  --bg:#0a0f1c;              /* deep industrial navy */
+  --panel:#0e1628;           /* cards / panels */
+  --text:#e8ecf4;            /* primary text */
+  --muted:#a9b2c7;           /* secondary text */
+
+  /* Lines & depth */
+  --line:rgba(255,255,255,.08);
+  --shadow: 0 24px 70px rgba(0,0,0,.55);
+
+  /* AUMOVIO accents (blue → violet) */
+  --accent:#5aa7ff;          /* primary blue */
+  --accent2:#7c6cff;         /* violet secondary */
+
+  /* Gradients */
+  --grad-accent: linear-gradient(
+    135deg,
+    rgba(90,167,255,.25),
+    rgba(124,108,255,.25)
+  );
 }
+
 
 *{box-sizing:border-box}
 html,body{height:100%}
 body{
   margin:0;
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-  background: radial-gradient(1200px 800px at 20% 0%, rgba(125,211,252,.10), transparent 60%),
-              radial-gradient(900px 700px at 80% 10%, rgba(196,181,253,.10), transparent 60%),
-              var(--bg);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  background:
+    radial-gradient(900px 600px at 15% 5%, rgba(90,167,255,.12), transparent 60%),
+    radial-gradient(800px 600px at 85% 10%, rgba(124,108,255,.10), transparent 60%),
+    linear-gradient(180deg, #070b14, var(--bg));
   color:var(--text);
   line-height:1.55;
 }
