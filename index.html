@@ -1,48 +1,132 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Daniel Renke</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <style>
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      background: #0f172a;
-      color: #e5e7eb;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
-    }
-    .card {
-      max-width: 520px;
-      padding: 2rem;
-      border-radius: 12px;
-      background: #020617;
-      box-shadow: 0 0 40px rgba(0,0,0,0.5);
-    }
-    h1 {
-      margin-top: 0;
-    }
-    a {
-      color: #38bdf8;
-      text-decoration: none;
-    }
-  </style>
+  <meta name="description" content="Personal site and small projects by Daniel Renke." />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="card">
-    <h1>Daniel Renke</h1>
-    <p>
-      IT trainee candidate · Web & Software basics · Villingen-Schwenningen
-    </p>
-    <p>
-      This site documents my learning projects and technical experiments.
-    </p>
-    <p>
-      🚧 Project in progress
-    </p>
-  </div>
+  <header class="wrap">
+    <nav class="nav">
+      <a class="brand" href="/">Daniel Renke</a>
+      <div class="navlinks">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <p class="kicker">Villingen-Schwenningen · Germany</p>
+      <h1>Small, reliable software — built with focus.</h1>
+      <p class="lead">
+        I’m preparing for an IT apprenticeship (Ausbildung) and documenting practical projects:
+        web basics, deployment, and backend fundamentals.
+      </p>
+
+      <div class="cta">
+        <a class="btn" href="#projects">View projects</a>
+        <a class="btn secondary" href="https://github.com/jolly-rodger32" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+
+      <div class="meta">
+        <span class="pill">HTML/CSS</span>
+        <span class="pill">GitHub Pages</span>
+        <span class="pill">Custom domain + DNS</span>
+        <span class="pill">HTTPS</span>
+      </div>
+    </section>
+  </header>
+
+  <main class="wrap">
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <p class="sub">
+        Focused, finished, and deployed. More coming soon.
+      </p>
+
+      <div class="grid">
+        <article class="card">
+          <div class="cardhead">
+            <h3>Portfolio site (this domain)</h3>
+            <span class="tag">Live</span>
+          </div>
+          <p>
+            Static site deployed on GitHub Pages with custom DNS setup and HTTPS.
+          </p>
+          <ul class="list">
+            <li>Domain setup, DNS records (A/CNAME)</li>
+            <li>HTTPS certificate + enforced HTTPS</li>
+            <li>Clean, minimal frontend</li>
+          </ul>
+          <div class="actions">
+            <a class="link" href="https://danielrenke.com" target="_blank" rel="noreferrer">Open</a>
+            <a class="link" href="https://github.com/jolly-rodger32/danielrenke.com" target="_blank" rel="noreferrer">Repo</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="cardhead">
+            <h3>Mini login system (backend)</h3>
+            <span class="tag muted">In progress</span>
+          </div>
+          <p>
+            A small backend project with authentication and a simple database.
+            Built to learn fundamentals the right way.
+          </p>
+          <ul class="list">
+            <li>User registration + login</li>
+            <li>Password hashing</li>
+            <li>SQLite/Postgres database</li>
+          </ul>
+          <div class="actions">
+            <a class="link disabled" href="#" onclick="return false;">Demo (soon)</a>
+            <a class="link disabled" href="#" onclick="return false;">Repo (soon)</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <h2>About</h2>
+      <div class="two">
+        <p>
+          I like structured problem solving and building practical systems.
+          My current focus is consistent progress: small projects, clean deployment,
+          and documentation.
+        </p>
+        <p>
+          Target roles: <strong>Fachinformatiker/in</strong> (Anwendungsentwicklung or Systemintegration).
+          I’m especially interested in reliable workflows, troubleshooting, and learning-by-building.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p class="sub">The easiest way to reach me:</p>
+      <div class="contact">
+        <a class="btn secondary" href="mailto:daniel@example.com">Email</a>
+        <a class="btn secondary" href="https://github.com/jolly-rodger32" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+      <p class="note">
+        Tip: replace the email address with your real one.
+      </p>
+    </section>
+
+    <footer class="footer">
+      <span>© <span id="y"></span> Daniel Renke</span>
+      <span class="sep">·</span>
+      <a class="footlink" href="#projects">Projects</a>
+      <span class="sep">·</span>
+      <a class="footlink" href="#contact">Contact</a>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
